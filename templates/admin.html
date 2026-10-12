@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="csrf-token" content="{{ csrf_token }}">
+    <meta charset="UTF-8">
+    <title>Program Admin</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Program Admin</h1>
+        <p>Manage Programs (CRUD on Program table)</p>
+        <p style="margin-top:8px; font-size:13px;">
+            <a href="{{ url_for('index') }}" style="color:#93c5fd; text-decoration:none; margin-right:12px;">
+                ← Back to Search
+            </a>
+        </p>
+    </header>
+
+    <main>
+        <section class="card data-note">
+            <strong>Real data: U.S. Department of Education College Scorecard</strong>
+            <p>66,342 bachelor’s program records · 2,378 institutions · pinned 2025 releases.</p>
+            <p>Earnings are reported medians two years after completion for the federally aided,
+            working, non-enrolled population covered by the source, not guaranteed salaries.
+            Tuition is annual undergraduate in-state tuition and fees, not total cost.
+            Missing or suppressed values display as “Not reported”.</p>
+            <p><a href="/api/data-source" target="_blank" rel="noopener">Source versions and coverage</a>
+            · <a href="https://collegescorecard.ed.gov/data/" target="_blank" rel="noopener">Official data</a></p>
+        </section>
+
+        <section class="card">
+            <h2>Programs (first 200)</h2>
+            <div class="form-row">
+                <button onclick="loadAllPrograms()">Reload Programs</button>
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Program Name</th>
+                        <th>University</th>
+                        <th>Major</th>
+                        <th>Degree</th>
+                        <th>Median earnings (2 yr)</th>
+                        <th>Select</th>
+                    </tr>
+                </thead>
+                <tbody id="adminProgramTableBody"></tbody>
+            </table>
+        </section>
+
+        <section class="card">
+            <h2>Edit / Create Program</h2>
+            <div class="form-row">
+                <label>
+                    Program ID:
+                    <input id="adminProgramIdInput" placeholder="(auto for new)" readonly>
+                </label>
+            </div>
+            <div class="form-row">
+                <label>
+                    Name:
+                    <input id="adminProgramNameInput">
+                </label>
+                <label>
+                    UniversityID:
+                    <input id="adminUniversityIdInput" type="number">
+                </label>
+                <label>
+                    MajorID:
+                    <input id="adminMajorIdInput" type="number">
+                </label>
+            </div>
+            <div class="form-row">
+                <label>
+                    Degree Type:
+                    <input id="adminDegreeTypeInput" placeholder="e.g. BS, MS">
+                </label>
+                <label>
+                    Median earnings (2 yr):
+                    <input id="adminMedianSalaryInput" type="number">
+                </label>
+            </div>
+
+            <div class="form-row">
+                <button onclick="createProgramAdmin()">Create New</button>
+                <button onclick="updateProgramAdmin()">Update Selected</button>
+                <button onclick="deleteProgramAdmin()">Delete Selected</button>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>Status</h2>
+            <pre id="statusBox">Ready (admin).</pre>
+        </section>
+
+        <section class="card">
+            <h2>Advanced Transaction: Update Major–Job Relations</h2><p>Job data and major–job mappings are not included in College Scorecard. This course feature is retained for a separately sourced job dataset; no synthetic jobs are loaded.</p>
+
+            <div class="form-row">
+                <label>
+                    Major:
+                    <select id="txnMajorSelect"></select>
+                </label>
+
+                <label>
+                    Job 1:
+                    <select id="txnJob1Select"></select>
+                </label>
+
+                <label>
+                    Job 2:
+                    <select id="txnJob2Select"></select>
+                </label>
+            </div>
+
+            <div class="form-row">
+                <button onclick="runMajorJobTransaction()">
+                    Run Transaction
+                </button>
+            </div>
+
+            <div class="form-row">
+                <label>
+                    Threshold (|MajorAvg - Job1Avg|):
+                    <input id="txnThresholdInput" type="number" value="15000">
+                </label>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>Transaction Result Summary</h2>
+            <table id="txnResultTable">
+                <thead>
+                    <tr>
+                        <th>Major</th>
+                        <th>Job 1</th>
+                        <th>Job 2</th>
+                        <th>Avg Major Salary</th>
+                        <th>Avg Job1 Salary</th>
+                        <th>Avg Job2 Salary</th>
+                        <th>Difference</th>
+                        <th>Switched?</th>
+                    </tr>
+                </thead>
+                <tbody id="txnResultBody">
+                    <tr><td colspan="8">Run a transaction to see results</td></tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="card">
+            <h3>Current Jobs Linked to This Major</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Job Title</th>
+                    </tr>
+                </thead>
+                <tbody id="majorJobsTableBody"></tbody>
+            </table>
+        </section>
+
+    </main>
+
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+    <script>
+        // 页面加载完自动拉一次列表
+        window.addEventListener('DOMContentLoaded', () => {
+            loadAllPrograms();
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,306 @@
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f5f7;
+}
+
+header {
+    background: #1f2933;
+    color: white;
+    padding: 16px 24px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+header p {
+    margin: 4px 0 0 0;
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+main {
+    padding: 16px 24px 40px;
+}
+
+.card {
+    background: white;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 16px;
+    box-shadow: 0 2px 4px rgba(15, 23, 42, 0.08);
+}
+
+.card h2 {
+    margin-top: 0;
+    font-size: 18px;
+}
+
+.form-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+label {
+    font-size: 14px;
+}
+
+input {
+    margin-left: 4px;
+    padding: 4px 6px;
+}
+
+button {
+    padding: 6px 10px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    background: #2563eb;
+    color: white;
+    font-size: 14px;
+}
+
+button:hover {
+    background: #1d4ed8;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 8px;
+    font-size: 14px;
+}
+
+th, td {
+    border: 1px solid #e5e7eb;
+    padding: 6px 8px;
+    text-align: left;
+}
+
+th {
+    background: #f3f4f6;
+}
+
+pre#statusBox {
+    margin: 0;
+    padding: 8px;
+    background: #0b1120;
+    color: #e5e7eb;
+    border-radius: 4px;
+    font-size: 12px;
+}
+
+.clear-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #f87171;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 2px 6px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.clear-btn:hover {
+    background-color: #ef4444;
+}
+
+.alert-list {
+    list-style: none;
+    padding: 0;
+}
+
+.alert-item {
+    padding: 12px;
+    background: #f7f7f7;
+    border: 1px solid #ddd;
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.delete-alert-button {
+    background-color: #d9534f;
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.delete-alert-button:hover {
+    background-color: #c9302c;
+}
+
+.alert-item {
+    padding: 12px;
+    background: #f7f7f7;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    position: relative; /* 让 clear-btn 定位在右上角 */
+}
+
+.search-btn {
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-left: 8px;
+}
+
+.search-btn:hover {
+    background-color: #1d4ed8;
+}
+
+/*comment: login */
+/* Login page styles */
+.login-container {
+    width: 350px;
+    margin: 80px auto;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #f9fafb;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.login-box {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.login-box input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 6px;
+    margin-bottom: 14px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.login-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.login-btn:hover {
+    background-color: #1d4ed8;
+}
+
+.status-text {
+    text-align: center;
+    margin-top: 12px;
+    color: red;
+}
+
+/* A normal small button used next to inputs (like Search) */
+.search-btn {
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-left: 8px;
+}
+
+.search-btn:hover {
+    background-color: #1d4ed8;
+}
+
+/* comparison */
+.comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.comparison-table th,
+.comparison-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.comparison-table th {
+    background-color: #f3f4f6;
+    text-align: left;
+}
+
+.delete-btn {
+    background-color: #ef4444;
+    color: white;
+    padding: 5px 8px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.delete-btn:hover {
+    background-color: #dc2626;
+}
+
+/*navigation*/
+.nav-btn {
+    background-color: #2563eb;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+}
+
+.nav-btn:hover {
+    background-color: #1d4ed8;
+}
+
+/* user ifno display */
+/* Page centered container */
+.page-container {
+    max-width: 700px;
+    margin: 0 auto;        /* <-- 中心布局 */
+    padding: 20px;
+}
+
+/* Card styling for user info */
+.info-card {
+    background: #f9fafb;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+/* Edit preference section styling */
+.edit-section {
+    background: #f3f4f6;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+/* Real-data annotations and responsive tables. */
+.data-note { border-left: 4px solid #2563eb; }
+.data-note p { line-height: 1.6; }
+.card { overflow-x: auto; }
+nav { display: flex; gap: 0.75rem; padding: 0.75rem; flex-wrap: wrap; }
+select { max-width: 100%; padding: 0.5rem; }
+@media (max-width: 700px) { main { padding: 12px; } .form-row { flex-wrap: wrap; } }

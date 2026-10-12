@@ -1,0 +1,91 @@
+CREATE TABLE IF NOT EXISTS University (
+    UniversityID INT PRIMARY KEY,
+    Name VARCHAR(255) NOT NULL,
+    Location VARCHAR(8) NOT NULL,
+    City VARCHAR(255),
+    Tuition DECIMAL(12,2) CHECK(Tuition >= 0),
+    TuitionOutState DECIMAL(12,2) CHECK(TuitionOutState >= 0),
+    Website VARCHAR(512),
+    Source VARCHAR(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+CREATE TABLE IF NOT EXISTS Major (
+    MajorID INT PRIMARY KEY,
+    MajorName VARCHAR(255) NOT NULL,
+    Field VARCHAR(255),
+    CIPCode VARCHAR(4) UNIQUE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+CREATE TABLE IF NOT EXISTS Program (
+    ProgramID INT PRIMARY KEY AUTO_INCREMENT,
+    Name VARCHAR(255) NOT NULL,
+    UniversityID INT NOT NULL,
+    MajorID INT NOT NULL,
+    DegreeType VARCHAR(255) NOT NULL,
+    MedianSalary DECIMAL(12,2) CHECK(MedianSalary >= 0),
+    Source VARCHAR(255) NOT NULL,
+    SourceKey VARCHAR(64) UNIQUE,
+    EarningsMetric VARCHAR(255),
+    FOREIGN KEY (UniversityID) REFERENCES University(UniversityID),
+    FOREIGN KEY (MajorID) REFERENCES Major(MajorID),
+    INDEX idx_program_major (MajorID),
+    INDEX idx_program_university (UniversityID)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+CREATE TABLE IF NOT EXISTS Job (
+    JobID INT PRIMARY KEY AUTO_INCREMENT,
+    JobTitle VARCHAR(255) NOT NULL,
+    Company VARCHAR(255),
+    Location VARCHAR(255),
+    AvgSalary DECIMAL(12,2) CHECK(AvgSalary >= 0)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+CREATE TABLE IF NOT EXISTS MajorJob (
+    MajorID INT NOT NULL,
+    JobID INT NOT NULL,
+    PRIMARY KEY(MajorID,JobID),
+    FOREIGN KEY (MajorID) REFERENCES Major(MajorID),
+    FOREIGN KEY (JobID) REFERENCES Job(JobID)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+CREATE TABLE IF NOT EXISTS User (
+    UserID INT PRIMARY KEY AUTO_INCREMENT,
+    Username VARCHAR(100) NOT NULL UNIQUE,
+    PasswordHash VARCHAR(255) NOT NULL,
+    Email VARCHAR(255),
+    PreferredLocation VARCHAR(255),
+    PreferredMajor INT,
+    PreferredJob INT,
+    IsAdmin INT NOT NULL DEFAULT 0 CHECK(IsAdmin IN (0,1)),
+    FOREIGN KEY (PreferredMajor) REFERENCES Major(MajorID),
+    FOREIGN KEY (PreferredJob) REFERENCES Job(JobID)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+CREATE TABLE IF NOT EXISTS Bookmark (
+    UserID INT NOT NULL,
+    ProgramID INT NOT NULL,
+    PRIMARY KEY(UserID,ProgramID),
+    FOREIGN KEY (UserID) REFERENCES User(UserID) ON DELETE CASCADE,
+    FOREIGN KEY (ProgramID) REFERENCES Program(ProgramID) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+CREATE TABLE IF NOT EXISTS Comparison (
+    ComparisonID INT PRIMARY KEY AUTO_INCREMENT,
+    UserID INT NOT NULL,
+    ProgramID1 INT NOT NULL,
+    ProgramID2 INT NOT NULL,
+    NoteFromUser TEXT,
+    CHECK(ProgramID1 != ProgramID2),
+    FOREIGN KEY (UserID) REFERENCES User(UserID) ON DELETE CASCADE,
+    FOREIGN KEY (ProgramID1) REFERENCES Program(ProgramID) ON DELETE CASCADE,
+    FOREIGN KEY (ProgramID2) REFERENCES Program(ProgramID) ON DELETE CASCADE,
+    INDEX idx_comparison_user (UserID)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+CREATE TABLE IF NOT EXISTS Alert (
+    AlertID INT PRIMARY KEY AUTO_INCREMENT,
+    UserID INT NOT NULL,
+    Message TEXT NOT NULL,
+    FOREIGN KEY (UserID) REFERENCES User(UserID) ON DELETE CASCADE,
+    INDEX idx_alert_user (UserID)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="csrf-token" content="{{ csrf_token }}">
+    <meta charset="UTF-8">
+    <title>Login - Program Explorer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="login-container">
+    <h2>EduConnect Login</h2><p>Use the account created during setup. There are no shared demo credentials.</p>
+
+    <div class="login-box">
+        <label for="loginUsername">Username</label>
+        <input id="loginUsername" type="text" placeholder="Enter username">
+
+        <label for="loginPassword">Password</label>
+        <input id="loginPassword" type="password" placeholder="Enter password">
+
+        <button class="login-btn" onclick="login()">Login</button>
+
+        <p id="loginStatus" class="status-text"></p>
+
+        <p style="margin-top:10px; font-size:13px;">
+            Or go to
+            <a href="{{ url_for('admin') }}">Admin Page</a>
+        </p>
+    </div>
+</div>
+
+<script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>

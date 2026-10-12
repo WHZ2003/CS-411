@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="csrf-token" content="{{ csrf_token }}">
+    <title>User Information</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="page-container">
+    <h1>User Information</h1>
+    <button class="nav-btn" onclick="window.location.href='/'">Back to Home</button>
+
+    <div id="userInfoContainer" class="info-card"></div>
+
+    <button id="editPrefBtn" class="nav-btn" onclick="startEditPreferences()">
+        Edit Preferences
+    </button>
+
+    <div id="editPrefSection" class="edit-section" style="display:none;">
+        <h2>Edit Preferences</h2>
+
+        <label><strong>Preferred Major:</strong></label><br>
+        <select id="majorSelect"></select><br><br>
+
+        <label><strong>Preferred Job:</strong></label><br>
+        <select id="jobSelect"></select><br><br>
+
+        <button class="nav-btn" onclick="savePreferences()">Save</button>
+        <button class="delete-btn" onclick="cancelEditPreferences()">Cancel</button>
+    </div>
+
+    <h2>Change Password</h2>
+    <input type="password" id="newPasswordInput" placeholder="At least 12 characters" minlength="12" autocomplete="new-password">
+    <button class="delete-btn" onclick="changePassword()">Update Password</button>
+</div>
+
+<script src="/static/app.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", loadUserInfo);
+</script>
+
+</body>
+</html>

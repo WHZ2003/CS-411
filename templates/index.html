@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="csrf-token" content="{{ csrf_token }}">
+    <meta charset="UTF-8">
+    <title>Program Explorer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<nav>    <button id="alertButton" class="red-button" onclick="window.location.href='/alert'">Alerts</button>
+    <button onclick="logout()">Logout</button>
+    <button class="nav-btn" onclick="window.location.href='/userinfo'">User Info</button>
+</nav>
+    <header>
+        <h1>Program Explorer</h1>
+        <p>Explore real US undergraduate programs, compare costs and outcomes, and save your shortlist.</p>
+        <p style="margin-top:8px; font-size:13px;">
+            <a href="{{ url_for('index') }}" style="color:#93c5fd; text-decoration:none; margin-right:12px;">
+                Search & Bookmarks
+            </a>
+            |
+            <a href="{{ url_for('admin') }}" style="color:#93c5fd; text-decoration:none; margin-left:12px;">
+                Admin: Manage Programs
+            </a>
+        </p>
+    </header>
+
+    <main>
+        <section class="card data-note">
+            <strong>Real data: U.S. Department of Education College Scorecard</strong>
+            <p>66,342 bachelor’s program records · 2,378 institutions · pinned 2025 releases.</p>
+            <p>Earnings are reported medians two years after completion for the federally aided,
+            working, non-enrolled population covered by the source, not guaranteed salaries.
+            Tuition is annual undergraduate in-state tuition and fees, not total cost.
+            Missing or suppressed values display as “Not reported”.</p>
+            <p><a href="/api/data-source" target="_blank" rel="noopener">Source versions and coverage</a>
+            · <a href="https://collegescorecard.ed.gov/data/" target="_blank" rel="noopener">Official data</a></p>
+        </section>
+        <section class="card">
+            <h2>Search Programs</h2>
+            <div class="form-row">
+                <label>
+                    Keyword:
+                    <input id="keywordInput" placeholder="e.g. data, Illinois, UIUC">
+                </label>
+                <button onclick="keywordSearch()">Keyword Search</button>
+            </div>
+
+            <div class="form-row">
+                <label>
+                    Major:
+                    <input id="majorInput" placeholder="e.g. Computer Science">
+                </label>
+                <label>
+                    Location:
+                    <input id="locationInput" placeholder="e.g. IL">
+                </label>
+                <label>
+                    Min median earnings:
+                    <input id="minSalarySearchInput" type="number" placeholder="e.g. 70000">
+                </label>
+                <button onclick="searchPrograms()">Search by Major & Location</button>
+            </div>
+
+            <button onclick="clearSearchResults()">Clear Search Results</button>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ProgramID</th>
+                        <th>Program Name</th>
+                        <th>University</th>
+                        <th>Location</th>
+                        <th>Major</th>
+                        <th>Degree</th>
+                        <th>Median earnings (2 yr)</th>
+                        <th>Bookmark</th>
+                    </tr>
+                </thead>
+                <tbody id="programTableBody"></tbody>
+            </table>
+        </section>
+
+        <section class="card">
+            <h2>User Bookmarks</h2>
+
+            <div class="form-row">
+                <span><strong>Current User:</strong> <span id="currentUserDisplay"></span></span>
+                <button onclick="loadBookmarks()">Reload Bookmarks</button>
+                <button onclick="clearAllBookmarks()">Clear All Bookmarks</button>
+            </div>
+
+            <div class="form-row">
+                <label>Max annual in-state tuition:</label>
+                <input type="number" id="maxTuitionInput" value="50000">
+
+                <label>Min median earnings:</label>
+                <input type="number" id="minSalaryInput" value="60000">
+
+                <button id="recommendBtn" class="primary-btn">Recommend Programs</button>
+
+            </div>
+
+            <h3>Recommended Programs</h3><p>Set your preferred major in User Info first. Results must satisfy both limits; unavailable earnings are excluded.</p>
+
+            <button onclick="clearRecommendedResults()">Clear Recommended</button>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ProgramID</th>
+                        <th>Program Name</th>
+                        <th>University</th>
+                        <th>Major</th>
+                        <th>Degree</th>
+                        <th>Median earnings (2 yr)</th>
+                        <th>Tuition</th>
+                        <th>Avg Tuition (Major)</th>
+                        <th>Bookmark</th>
+                    </tr>
+                </thead>
+                <tbody id="recommendedProgramsTableBody"></tbody>
+            </table>
+
+            <h3>User Bookmarks</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ProgramID</th>
+                        <th>Program Name</th>
+                        <th>University</th>
+                        <th>Major</th>
+                        <th>Degree</th>
+                        <th>Median earnings (2 yr)</th>
+                        <th>Remove</th>
+                    </tr>
+                </thead>
+                <tbody id="bookmarkTableBody"></tbody>
+            </table>
+        </section>
+
+        <section class="card">
+            <h2>Comparison Tool</h2>
+
+            <div class="form-row">
+                <span><strong>Current User:</strong> <span id="currentCompareUserDisplay"></span></span>
+                <button onclick="loadSavedComparisons()">Load Comparisons</button>
+            </div>
+
+            <div class="form-row">
+                <label>Keyword:</label>
+                <input id="compareSearchInput" type="text" placeholder="Search program or major">
+                <button onclick="searchCompare()">Search</button>
+            </div>
+
+            <div id="compareSearchResults"></div>
+
+            <hr>
+
+            <div style="display: flex; gap: 20px;">
+
+                <div style="flex: 1; position: relative;">
+                    <h3>Program 1</h3>
+                    <button class="clear-btn" onclick="clearLeftProgram()">✕</button>
+                    <div id="compareLeft"></div>
+                </div>
+
+                <div style="flex: 1; position: relative;">
+                    <h3>Program 2</h3>
+                    <button class="clear-btn" onclick="clearRightProgram()">✕</button>
+                    <div id="compareRight"></div>
+                </div>
+
+            </div>
+
+            <div class="form-row">
+                <label>Notes:</label>
+                <textarea id="compareNote" rows="3" style="width: 100%;"></textarea>
+            </div>
+
+            <button id="saveCompareBtn" disabled onclick="saveComparison()">Save Comparison</button>
+
+            <hr>
+
+            <h3>Your Saved Comparisons</h3>
+            <button onclick="clearCompareSearch()">Clear Compare Search</button>
+            <div id="savedComparisons"></div>
+        </section>
+
+        <section class="card">
+            <h2>Status</h2>
+            <pre id="statusBox">Ready.</pre>
+        </section>
+    </main>
+
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const userId = localStorage.getItem("user_id");
+            const username = localStorage.getItem("username");
+
+            if (!userId) {
+                window.location.href = "/login";
+                return;
+            }
+
+            const display = document.getElementById("currentUserDisplay");
+            if (display) {
+                display.textContent = username ? `${username} (ID ${userId})` : `User ${userId}`;
+            }
+
+            const cmpDisplay = document.getElementById("currentCompareUserDisplay");
+            if (cmpDisplay) {
+                cmpDisplay.textContent = username ? `${username} (ID ${userId})` : `User ${userId}`;
+            }
+
+            loadBookmarks();
+        });
+    </script>
+</body>
+</html>

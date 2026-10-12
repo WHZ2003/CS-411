@@ -1,0 +1,372 @@
+MajorID,MajorName,Field,CIPCode
+100,"Agriculture, General.",CIP 01,0100
+101,Agricultural Business and Management.,CIP 01,0101
+102,Agricultural Mechanization.,CIP 01,0102
+103,Agricultural Production Operations.,CIP 01,0103
+104,Agricultural and Food Products Processing.,CIP 01,0104
+105,Agricultural and Domestic Animal Services.,CIP 01,0105
+106,Applied Horticulture and Horticultural Business Services.,CIP 01,0106
+107,International Agriculture.,CIP 01,0107
+108,Agricultural Public Services.,CIP 01,0108
+109,Animal Sciences.,CIP 01,0109
+110,Food Science and Technology.,CIP 01,0110
+111,Plant Sciences.,CIP 01,0111
+112,Soil Sciences.,CIP 01,0112
+113,Agriculture/Veterinary Preparatory Programs.,CIP 01,0113
+180,Veterinary Medicine.,CIP 01,0180
+181,Veterinary Biomedical and Clinical Sciences.,CIP 01,0181
+183,Veterinary/Animal Health Technologies/Technicians.,CIP 01,0183
+199,"Agriculture, Agriculture Operations, and Related Sciences, Other.",CIP 01,0199
+301,Natural Resources Conservation and Research.,CIP 03,0301
+302,Natural Resources Management and Policy.,CIP 03,0302
+303,Fishing and Fisheries Sciences and Management.,CIP 03,0303
+305,Forestry.,CIP 03,0305
+306,Wildlife and Wildlands Science and Management.,CIP 03,0306
+399,"Natural Resources and Conservation, Other.",CIP 03,0399
+402,Architecture.,CIP 04,0402
+403,"City/Urban, Community and Regional Planning.",CIP 04,0403
+404,Environmental Design.,CIP 04,0404
+405,Interior Architecture.,CIP 04,0405
+406,Landscape Architecture.,CIP 04,0406
+408,Architectural History and Criticism.,CIP 04,0408
+409,Architectural Sciences and Technology.,CIP 04,0409
+410,Real Estate Development.,CIP 04,0410
+499,"Architecture and Related Services, Other.",CIP 04,0499
+501,Area Studies.,CIP 05,0501
+502,"Ethnic, Cultural Minority, Gender, and Group Studies.",CIP 05,0502
+901,Communication and Media Studies.,CIP 09,0901
+904,Journalism.,CIP 09,0904
+907,"Radio, Television, and Digital Communication.",CIP 09,0907
+909,"Public Relations, Advertising, and Applied Communication.",CIP 09,0909
+910,Publishing.,CIP 09,0910
+999,"Communication, Journalism, and Related Programs, Other.",CIP 09,0999
+1001,Communications Technology/Technician.,CIP 10,1001
+1002,Audiovisual Communications Technologies/Technicians.,CIP 10,1002
+1003,Graphic Communications.,CIP 10,1003
+1099,"Communications Technologies/Technicians and Support Services, Other.",CIP 10,1099
+1101,"Computer and Information Sciences, General.",CIP 11,1101
+1102,Computer Programming.,CIP 11,1102
+1103,Data Processing.,CIP 11,1103
+1104,Information Science/Studies.,CIP 11,1104
+1105,Computer Systems Analysis.,CIP 11,1105
+1107,Computer Science.,CIP 11,1107
+1108,Computer Software and Media Applications.,CIP 11,1108
+1109,Computer Systems Networking and Telecommunications.,CIP 11,1109
+1110,Computer/Information Technology Administration and Management.,CIP 11,1110
+1199,"Computer and Information Sciences and Support Services, Other.",CIP 11,1199
+1203,Funeral Service and Mortuary Science.,CIP 12,1203
+1204,Cosmetology and Related Personal Grooming Services.,CIP 12,1204
+1205,Culinary Arts and Related Services.,CIP 12,1205
+1299,"Personal and Culinary Services, Other.",CIP 12,1299
+1301,"Education, General.",CIP 13,1301
+1302,"Bilingual, Multilingual, and Multicultural Education.",CIP 13,1302
+1303,Curriculum and Instruction.,CIP 13,1303
+1304,Educational Administration and Supervision.,CIP 13,1304
+1305,Educational/Instructional Media Design.,CIP 13,1305
+1306,"Educational Assessment, Evaluation, and Research.",CIP 13,1306
+1307,International and Comparative Education.,CIP 13,1307
+1309,Social and Philosophical Foundations of Education.,CIP 13,1309
+1310,Special Education and Teaching.,CIP 13,1310
+1311,Student Counseling and Personnel Services.,CIP 13,1311
+1312,"Teacher Education and Professional Development, Specific Levels and Methods.",CIP 13,1312
+1313,"Teacher Education and Professional Development, Specific Subject Areas.",CIP 13,1313
+1314,Teaching English or French as a Second or Foreign Language.,CIP 13,1314
+1315,Teaching Assistants/Aides.,CIP 13,1315
+1399,"Education, Other.",CIP 13,1399
+1401,"Engineering, General.",CIP 14,1401
+1402,"Aerospace, Aeronautical and Astronautical Engineering.",CIP 14,1402
+1403,Agricultural Engineering.,CIP 14,1403
+1404,Architectural Engineering.,CIP 14,1404
+1405,Biomedical/Medical Engineering.,CIP 14,1405
+1406,Ceramic Sciences and Engineering.,CIP 14,1406
+1407,Chemical Engineering.,CIP 14,1407
+1408,Civil Engineering.,CIP 14,1408
+1409,Computer Engineering.,CIP 14,1409
+1410,"Electrical, Electronics and Communications Engineering.",CIP 14,1410
+1411,Engineering Mechanics.,CIP 14,1411
+1412,Engineering Physics.,CIP 14,1412
+1413,Engineering Science.,CIP 14,1413
+1414,Environmental/Environmental Health Engineering.,CIP 14,1414
+1418,Materials Engineering,CIP 14,1418
+1419,Mechanical Engineering.,CIP 14,1419
+1420,Metallurgical Engineering.,CIP 14,1420
+1421,Mining and Mineral Engineering.,CIP 14,1421
+1422,Naval Architecture and Marine Engineering.,CIP 14,1422
+1423,Nuclear Engineering.,CIP 14,1423
+1424,Ocean Engineering.,CIP 14,1424
+1425,Petroleum Engineering.,CIP 14,1425
+1427,Systems Engineering.,CIP 14,1427
+1428,Textile Sciences and Engineering.,CIP 14,1428
+1432,Polymer/Plastics Engineering.,CIP 14,1432
+1433,Construction Engineering.,CIP 14,1433
+1434,Forest Engineering.,CIP 14,1434
+1435,Industrial Engineering.,CIP 14,1435
+1436,Manufacturing Engineering.,CIP 14,1436
+1437,Operations Research.,CIP 14,1437
+1438,Surveying Engineering.,CIP 14,1438
+1439,Geological/Geophysical Engineering.,CIP 14,1439
+1440,Paper Science and Engineering.,CIP 14,1440
+1441,Electromechanical Engineering.,CIP 14,1441
+1442,"Mechatronics, Robotics, and Automation Engineering.",CIP 14,1442
+1443,Biochemical Engineering.,CIP 14,1443
+1444,Engineering Chemistry.,CIP 14,1444
+1445,Biological/Biosystems Engineering.,CIP 14,1445
+1499,"Engineering, Other.",CIP 14,1499
+1500,"Engineering Technology, General.",CIP 15,1500
+1501,Architectural Engineering Technologies/Technicians.,CIP 15,1501
+1502,Civil Engineering Technologies/Technicians.,CIP 15,1502
+1503,Electrical Engineering Technologies/Technicians.,CIP 15,1503
+1504,Electromechanical Instrumentation and Maintenance Technologies/Technicians.,CIP 15,1504
+1505,Environmental Control Technologies/Technicians.,CIP 15,1505
+1506,Industrial Production Technologies/Technicians.,CIP 15,1506
+1507,Quality Control and Safety Technologies/Technicians.,CIP 15,1507
+1508,Mechanical Engineering Related Technologies/Technicians.,CIP 15,1508
+1509,Mining and Petroleum Technologies/Technicians.,CIP 15,1509
+1510,Construction Engineering Technologies.,CIP 15,1510
+1511,Engineering-Related Technologies.,CIP 15,1511
+1512,Computer Engineering Technologies/Technicians.,CIP 15,1512
+1513,Drafting/Design Engineering Technologies/Technicians.,CIP 15,1513
+1514,Nuclear Engineering Technologies/Technicians.,CIP 15,1514
+1515,Engineering-Related Fields.,CIP 15,1515
+1516,Nanotechnology.,CIP 15,1516
+1517,Energy Systems Technologies/Technicians.,CIP 15,1517
+1599,"Engineering Technologies/Technicians, Other.",CIP 15,1599
+1601,"Linguistic, Comparative, and Related Language Studies and Services.",CIP 16,1601
+1602,"African Languages, Literatures, and Linguistics.",CIP 16,1602
+1603,"East Asian Languages, Literatures, and Linguistics.",CIP 16,1603
+1604,"Slavic, Baltic and Albanian Languages, Literatures, and Linguistics.",CIP 16,1604
+1605,"Germanic Languages, Literatures, and Linguistics.",CIP 16,1605
+1606,Modern Greek Language and Literature.,CIP 16,1606
+1607,"South Asian Languages, Literatures, and Linguistics.",CIP 16,1607
+1608,"Iranian/Persian Languages, Literatures, and Linguistics.",CIP 16,1608
+1609,"Romance Languages, Literatures, and Linguistics.",CIP 16,1609
+1610,"American Indian/Native American Languages, Literatures, and Linguistics.",CIP 16,1610
+1611,"Middle/Near Eastern and Semitic Languages, Literatures, and Linguistics.",CIP 16,1611
+1612,"Classics and Classical Languages, Literatures, and Linguistics.",CIP 16,1612
+1613,"Celtic Languages, Literatures, and Linguistics.",CIP 16,1613
+1614,"Southeast Asian and Australasian/Pacific Languages, Literatures, and Linguistics.",CIP 16,1614
+1615,"Turkic, Uralic-Altaic, Caucasian, and Central Asian Languages, Literatures, and Linguistics.",CIP 16,1615
+1616,American Sign Language.,CIP 16,1616
+1699,"Foreign Languages, Literatures, and Linguistics, Other.",CIP 16,1699
+1900,Work and Family Studies.,CIP 19,1900
+1901,"Family and Consumer Sciences/Human Sciences, General.",CIP 19,1901
+1902,Family and Consumer Sciences/Human Sciences Business Services.,CIP 19,1902
+1904,Family and Consumer Economics and Related Studies.,CIP 19,1904
+1905,"Foods, Nutrition, and Related Services.",CIP 19,1905
+1906,Housing and Human Environments.,CIP 19,1906
+1907,"Human Development, Family Studies, and Related Services.",CIP 19,1907
+1909,Apparel and Textiles.,CIP 19,1909
+1999,"Family and Consumer Sciences/Human Sciences, Other.",CIP 19,1999
+2200,Non-Professional General Legal Studies (Undergraduate).,CIP 22,2200
+2201,Law.,CIP 22,2201
+2202,Legal Research and Advanced Professional Studies.,CIP 22,2202
+2203,Legal Support Services.,CIP 22,2203
+2299,"Legal Professions and Studies, Other.",CIP 22,2299
+2301,"English Language and Literature, General.",CIP 23,2301
+2313,Rhetoric and Composition/Writing Studies.,CIP 23,2313
+2314,Literature.,CIP 23,2314
+2399,"English Language and Literature/Letters, Other.",CIP 23,2399
+2401,"Liberal Arts and Sciences, General Studies and Humanities.",CIP 24,2401
+2501,Library Science and Administration.,CIP 25,2501
+2599,"Library Science, Other.",CIP 25,2599
+2601,"Biology, General.",CIP 26,2601
+2602,"Biochemistry, Biophysics and Molecular Biology.",CIP 26,2602
+2603,Botany/Plant Biology.,CIP 26,2603
+2604,Cell/Cellular Biology and Anatomical Sciences.,CIP 26,2604
+2605,Microbiological Sciences and Immunology.,CIP 26,2605
+2607,Zoology/Animal Biology.,CIP 26,2607
+2608,Genetics.,CIP 26,2608
+2609,"Physiology, Pathology and Related Sciences.",CIP 26,2609
+2610,Pharmacology and Toxicology.,CIP 26,2610
+2611,"Biomathematics, Bioinformatics, and Computational Biology.",CIP 26,2611
+2612,Biotechnology.,CIP 26,2612
+2613,"Ecology, Evolution, Systematics, and Population Biology.",CIP 26,2613
+2615,Neurobiology and Neurosciences.,CIP 26,2615
+2699,"Biological and Biomedical Sciences, Other.",CIP 26,2699
+2701,Mathematics.,CIP 27,2701
+2703,Applied Mathematics.,CIP 27,2703
+2705,Statistics.,CIP 27,2705
+2799,"Mathematics and Statistics, Other.",CIP 27,2799
+2801,"Air Force ROTC, Air Science and Operations.",CIP 28,2801
+2803,"Army ROTC, Military Science and Operations.",CIP 28,2803
+2805,Military Science and Operational Studies.,CIP 28,2805
+2806,Security Policy and Strategy.,CIP 28,2806
+2902,"Intelligence, Command Control and Information Operations.",CIP 29,2902
+2903,Military Applied Sciences.,CIP 29,2903
+2904,Military Systems and Maintenance Technology.,CIP 29,2904
+2999,"Military Technologies and Applied Sciences, Other.",CIP 29,2999
+3000,"Multi-/Interdisciplinary Studies, General.",CIP 30,3000
+3001,Biological and Physical Sciences.,CIP 30,3001
+3005,Peace Studies and Conflict Resolution.,CIP 30,3005
+3006,Systems Science and Theory.,CIP 30,3006
+3008,Mathematics and Computer Science.,CIP 30,3008
+3010,Biopsychology.,CIP 30,3010
+3011,Gerontology.,CIP 30,3011
+3012,Historic Preservation and Conservation.,CIP 30,3012
+3013,Medieval and Renaissance Studies.,CIP 30,3013
+3014,Museology/Museum Studies.,CIP 30,3014
+3015,"Science, Technology and Society.",CIP 30,3015
+3016,Accounting and Computer Science.,CIP 30,3016
+3017,Behavioral Sciences.,CIP 30,3017
+3018,Natural Sciences.,CIP 30,3018
+3019,Nutrition Sciences.,CIP 30,3019
+3020,International/Global Studies.,CIP 30,3020
+3021,Holocaust and Related Studies.,CIP 30,3021
+3022,Classical and Ancient Studies.,CIP 30,3022
+3023,Intercultural/Multicultural and Diversity Studies.,CIP 30,3023
+3025,Cognitive Science.,CIP 30,3025
+3026,Cultural Studies/Critical Theory and Analysis.,CIP 30,3026
+3027,Human Biology.,CIP 30,3027
+3029,Maritime Studies.,CIP 30,3029
+3030,Computational Science.,CIP 30,3030
+3031,Human Computer Interaction.,CIP 30,3031
+3032,Marine Sciences.,CIP 30,3032
+3033,Sustainability Studies.,CIP 30,3033
+3099,"Multi/Interdisciplinary Studies, Other.",CIP 30,3099
+3101,"Parks, Recreation and Leisure Studies.",CIP 31,3101
+3103,"Parks, Recreation and Leisure Facilities Management.",CIP 31,3103
+3105,Health and Physical Education/Fitness.,CIP 31,3105
+3106,Outdoor Education.,CIP 31,3106
+3199,"Parks, Recreation, Leisure, and Fitness Studies, Other.",CIP 31,3199
+3201,Basic Skills and Developmental/Remedial Education.,CIP 32,3201
+3301,Citizenship Activities.,CIP 33,3301
+3401,Health-Related Knowledge and Skills.,CIP 34,3401
+3501,Interpersonal and Social Skills.,CIP 35,3501
+3601,Leisure and Recreational Activities.,CIP 36,3601
+3800,"Philosophy and Religious Studies, General.",CIP 38,3800
+3801,Philosophy.,CIP 38,3801
+3802,Religion/Religious Studies.,CIP 38,3802
+3899,"Philosophy and Religious Studies, Other.",CIP 38,3899
+3902,Bible/Biblical Studies.,CIP 39,3902
+3903,Missions/Missionary Studies and Missiology.,CIP 39,3903
+3904,Religious Education.,CIP 39,3904
+3905,Religious/Sacred Music.,CIP 39,3905
+3906,Theological and Ministerial Studies.,CIP 39,3906
+3907,Pastoral Counseling and Specialized Ministries.,CIP 39,3907
+3999,"Theology and Religious Vocations, Other.",CIP 39,3999
+4001,Physical Sciences.,CIP 40,4001
+4002,Astronomy and Astrophysics.,CIP 40,4002
+4004,Atmospheric Sciences and Meteorology.,CIP 40,4004
+4005,Chemistry.,CIP 40,4005
+4006,Geological and Earth Sciences/Geosciences.,CIP 40,4006
+4008,Physics.,CIP 40,4008
+4010,Materials Sciences.,CIP 40,4010
+4011,Physics and Astronomy.,CIP 40,4011
+4099,"Physical Sciences, Other.",CIP 40,4099
+4100,"Science Technologies/Technicians, General.",CIP 41,4100
+4101,Biology Technician/Biotechnology Laboratory Technician.,CIP 41,4101
+4102,Nuclear and Industrial Radiologic Technologies/Technicians.,CIP 41,4102
+4103,Physical Science Technologies/Technicians.,CIP 41,4103
+4199,"Science Technologies/Technicians, Other.",CIP 41,4199
+4201,"Psychology, General.",CIP 42,4201
+4202,Clinical Psychology.,CIP 42,4202
+4227,Research and Experimental Psychology.,CIP 42,4227
+4228,"Clinical, Counseling and Applied Psychology.",CIP 42,4228
+4299,"Psychology, Other.",CIP 42,4299
+4301,Criminal Justice and Corrections.,CIP 43,4301
+4302,Fire Protection.,CIP 43,4302
+4303,Homeland Security.,CIP 43,4303
+4304,Security Science and Technology.,CIP 43,4304
+4399,"Homeland Security, Law Enforcement, Firefighting and Related Protective Services, Other.",CIP 43,4399
+4400,"Human Services, General.",CIP 44,4400
+4402,Community Organization and Advocacy.,CIP 44,4402
+4404,Public Administration.,CIP 44,4404
+4405,Public Policy Analysis.,CIP 44,4405
+4407,Social Work.,CIP 44,4407
+4499,"Public Administration and Social Service Professions, Other.",CIP 44,4499
+4501,"Social Sciences, General.",CIP 45,4501
+4502,Anthropology.,CIP 45,4502
+4503,Archeology.,CIP 45,4503
+4504,Criminology.,CIP 45,4504
+4505,Demography and Population Studies.,CIP 45,4505
+4506,Economics.,CIP 45,4506
+4507,Geography and Cartography.,CIP 45,4507
+4509,International Relations and National Security Studies.,CIP 45,4509
+4510,Political Science and Government.,CIP 45,4510
+4511,Sociology.,CIP 45,4511
+4512,Urban Studies/Affairs.,CIP 45,4512
+4513,Sociology and Anthropology.,CIP 45,4513
+4514,Rural Sociology.,CIP 45,4514
+4599,"Social Sciences, Other.",CIP 45,4599
+4600,"Construction Trades, General.",CIP 46,4600
+4601,Mason/Masonry.,CIP 46,4601
+4602,Carpenters.,CIP 46,4602
+4603,Electrical and Power Transmission Installers.,CIP 46,4603
+4604,"Building/Construction Finishing, Management, and Inspection.",CIP 46,4604
+4699,"Construction Trades, Other.",CIP 46,4699
+4701,Electrical/Electronics Maintenance and Repair Technology.,CIP 47,4701
+4702,"Heating, Air Conditioning, Ventilation and Refrigeration Maintenance Technology/Technician (HAC, HACR, HVAC, HVACR).",CIP 47,4702
+4703,Heavy/Industrial Equipment Maintenance Technologies.,CIP 47,4703
+4706,Vehicle Maintenance and Repair Technologies.,CIP 47,4706
+4805,Precision Metal Working.,CIP 48,4805
+4807,Woodworking.,CIP 48,4807
+4901,Air Transportation.,CIP 49,4901
+4903,Marine Transportation.,CIP 49,4903
+4999,"Transportation and Materials Moving, Other.",CIP 49,4999
+5001,"Visual and Performing Arts, General.",CIP 50,5001
+5002,"Crafts/Craft Design, Folk Art and Artisanry.",CIP 50,5002
+5003,Dance.,CIP 50,5003
+5004,Design and Applied Arts.,CIP 50,5004
+5005,Drama/Theatre Arts and Stagecraft.,CIP 50,5005
+5006,Film/Video and Photographic Arts.,CIP 50,5006
+5007,Fine and Studio Arts.,CIP 50,5007
+5009,Music.,CIP 50,5009
+5010,"Arts, Entertainment,and Media Management.",CIP 50,5010
+5099,"Visual and Performing Arts, Other.",CIP 50,5099
+5100,"Health Services/Allied Health/Health Sciences, General.",CIP 51,5100
+5101,Chiropractic.,CIP 51,5101
+5102,Communication Disorders Sciences and Services.,CIP 51,5102
+5105,Advanced/Graduate Dentistry and Oral Sciences.,CIP 51,5105
+5106,Dental Support Services and Allied Professions.,CIP 51,5106
+5107,Health and Medical Administrative Services.,CIP 51,5107
+5108,Allied Health and Medical Assisting Services.,CIP 51,5108
+5109,"Allied Health Diagnostic, Intervention, and Treatment Professions.",CIP 51,5109
+5110,Clinical/Medical Laboratory Science/Research and Allied Professions.,CIP 51,5110
+5111,Health/Medical Preparatory Programs.,CIP 51,5111
+5112,Medicine.,CIP 51,5112
+5115,Mental and Social Health Services and Allied Professions.,CIP 51,5115
+5116,Nursing.,CIP 51,5116
+5117,Optometry.,CIP 51,5117
+5118,Ophthalmic and Optometric Support Services and Allied Professions.,CIP 51,5118
+5120,"Pharmacy, Pharmaceutical Sciences, and Administration.",CIP 51,5120
+5121,Podiatric Medicine/Podiatry.,CIP 51,5121
+5122,Public Health.,CIP 51,5122
+5123,Rehabilitation and Therapeutic Professions.,CIP 51,5123
+5124,Veterinary Medicine.,CIP 51,5124
+5125,Veterinary Biomedical and Clinical Sciences.,CIP 51,5125
+5127,Medical Illustration and Informatics.,CIP 51,5127
+5131,Dietetics and Clinical Nutrition Services.,CIP 51,5131
+5132,Bioethics/Medical Ethics.,CIP 51,5132
+5133,Alternative and Complementary Medicine and Medical Systems.,CIP 51,5133
+5134,Alternative and Complementary Medical Support Services.,CIP 51,5134
+5135,Somatic Bodywork and Related Therapeutic Services.,CIP 51,5135
+5136,Movement and Mind-Body Therapies and Education.,CIP 51,5136
+5137,Energy and Biologically Based Therapies.,CIP 51,5137
+5138,"Registered Nursing, Nursing Administration, Nursing Research and Clinical Nursing.",CIP 51,5138
+5139,"Practical Nursing, Vocational Nursing and Nursing Assistants.",CIP 51,5139
+5199,"Health Professions and Related Clinical Sciences, Other.",CIP 51,5199
+5201,"Business/Commerce, General.",CIP 52,5201
+5202,"Business Administration, Management and Operations.",CIP 52,5202
+5203,Accounting and Related Services.,CIP 52,5203
+5204,Business Operations Support and Assistant Services.,CIP 52,5204
+5205,Business/Corporate Communications.,CIP 52,5205
+5206,Business/Managerial Economics.,CIP 52,5206
+5207,Entrepreneurial and Small Business Operations.,CIP 52,5207
+5208,Finance and Financial Management Services.,CIP 52,5208
+5209,Hospitality Administration/Management.,CIP 52,5209
+5210,Human Resources Management and Services.,CIP 52,5210
+5211,International Business.,CIP 52,5211
+5212,Management Information Systems and Services.,CIP 52,5212
+5213,Management Sciences and Quantitative Methods.,CIP 52,5213
+5214,Marketing.,CIP 52,5214
+5215,Real Estate.,CIP 52,5215
+5216,Taxation.,CIP 52,5216
+5217,Insurance.,CIP 52,5217
+5218,"General Sales, Merchandising and Related Marketing Operations.",CIP 52,5218
+5219,"Specialized Sales, Merchandising and  Marketing Operations.",CIP 52,5219
+5220,Construction Management.,CIP 52,5220
+5221,Telecommunications Management.,CIP 52,5221
+5299,"Business, Management, Marketing, and Related Support Services, Other.",CIP 52,5299
+5301,High School/Secondary Diploma Programs.,CIP 53,5301
+5302,High School/Secondary Certificate Programs.,CIP 53,5302
+5401,History.,CIP 54,5401

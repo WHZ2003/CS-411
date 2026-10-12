@@ -1,0 +1,39 @@
+{
+  "publisher": "U.S. Department of Education, College Scorecard",
+  "catalog_url": "https://catalog.data.gov/dataset/college-scorecard",
+  "generated_at_utc": "2026-10-12T06:40:16.511121+00:00",
+  "scope": "US bachelor's programs (CREDLEV=3) joined to institutions by UNITID; not a complete current program catalog",
+  "earnings_metric": "EARN_MDN_HI_2YR",
+  "earnings_definition": "Median earnings two years after completion for the federally aided working, non-enrolled population covered by the source; not job salary or all graduates",
+  "tuition_definition": "TUITIONFEE_IN: annual institution-level undergraduate in-state tuition and fees; TUITIONFEE_OUT retained separately; not program-specific total cost or net price",
+  "cohort_warning": "Pinned most-recent-cohort releases pool different observation years. Release date is not the year of all measurements. Consult the source documentation.",
+  "sources": {
+    "institution": {
+      "url": "https://ed-public-download.scorecard.network/downloads/Most-Recent-Cohorts-Institution_05192025.zip",
+      "sha256": "74d464963c2948b7b6e97df6864345055b177466325a2b06c54f0e50e910b8e4"
+    },
+    "field-of-study": {
+      "url": "https://data.ed.gov/dataset/9dc70e6b-8426-4d71-b9d5-70ce6094a3f4/resource/ff68afc4-6d23-459d-9f60-4006e4f85583/download/most-recent-cohorts-field-of-study_04172025.zip",
+      "sha256": "79a4f11cf7901db445280d863fb1b1f0e4706cdea3dd446976fbe3f8ac49d968"
+    }
+  },
+  "counts": {
+    "universities": 2378,
+    "majors": 371,
+    "programs": 66342
+  },
+  "earnings_status": {
+    "PrivacySuppressed": 37878,
+    "reported": 27456,
+    "NULL": 1008
+  },
+  "excluded_rows": {
+    "not_bachelors": 151685,
+    "unmatched_or_non_numeric_unitid": 5483
+  },
+  "normalized_sha256": {
+    "universities.csv": "902305f41efcc8cfdadb8e79c1a8ca8394c802db85b0b4497904c636ca42c454",
+    "majors.csv": "183ed06a1e3bf54b9f1cef5a442cc8b26bf23caea6ca6df791a41e90fd7eebe7",
+    "programs.csv": "3c23b2c67ace87d865ae6384cd83cd224547b027bc810ae63e467080d87551a2"
+  }
+}

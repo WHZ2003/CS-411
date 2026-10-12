@@ -1,0 +1,10 @@
+runtime: python312
+entrypoint: gunicorn --bind :$PORT --workers 2 --threads 4 --timeout 120 main:app
+env_variables:
+  DATABASE_BACKEND: "mysql"
+  DB_NAME: "edu_connect"
+  DB_USER: "educonnect"
+  DB_UNIX_SOCKET: "/cloudsql/PROJECT_ID:REGION:INSTANCE_NAME"
+  SESSION_COOKIE_SECURE: "true"
+# Supply SECRET_KEY and DB_PASSWORD privately at deployment time.
+# Never commit the filled-in app.yaml or credentials.
